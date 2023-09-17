@@ -1,0 +1,59 @@
+.container-cadastro{
+    border-radius: 10px;
+    background: #FFF;
+    width: 550px;
+    height: 550px;
+    flex-shrink: 0;
+    margin-bottom: 0px;
+    padding: 0px 60px;
+}
+
+.paragrafo-cadastro{
+    text-align: justify;
+    font-size: 18px;
+    margin-top: 100px;
+}
+
+#light .span-cadastro{
+    color: #e79600;
+    font-weight: 800;
+}
+
+#dark .span-cadastro{
+    color: #000036;
+    font-weight: 800;
+}
+
+.container-btn{
+    margin-bottom: 80px;
+}
+
+.margem{
+    margin-right: 40px;
+}
+
+.btn-cadastro{
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#light .btn-cadastro{
+    background: #FFB84C;
+}
+
+#light .btn-cadastro:hover{
+    background-color: #e79600;
+}
+
+#dark .btn-cadastro{
+    background: #AEE2FF;
+    color: #000036;
+}
+
+#dark .btn-cadastro:hover{
+    background-color: #9ac8e0;
+}

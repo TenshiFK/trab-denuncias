@@ -1,0 +1,22 @@
+a{
+    font-weight: bold; 
+    font-size: 22px;
+}
+
+.header{
+    height: 150px;
+    padding: 0 150px;
+}
+
+#dark .logo_light{
+    display: none;
+}
+
+#light .logo_dark{
+    display: none;
+}
+
+.btn-tema{
+    margin-right: 20px;
+    margin-top: 5px;
+}

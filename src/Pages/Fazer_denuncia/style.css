@@ -1,0 +1,171 @@
+.container-denuncia{
+    width: 860px;
+    min-height: 1200px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.50);
+    padding: 80px 50px;
+}
+
+.btn-finalizar{
+    margin-top: 60px;
+    border: none;
+    border-radius: 10px;
+    background: #FFA500;
+    color: #FFFFFF;
+    padding: 5px 50px;
+    font-size: 22px;
+}
+#light .btn-finalizar{
+    background: #FFA500;
+}
+
+#light .btn-finalizar:hover{
+    background-color: #e79600;
+}
+
+#dark .btn-finalizar{
+    background: #AEE2FF;
+    color: #000036;
+}
+
+#dark .btn-finalizar:hover{
+    background-color: #9ac8e0;
+}
+
+.label{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#light .label{
+    color: #FFA500;
+}
+
+#dark .label{
+    color: #FFF;
+}
+
+#light .label-check{
+    color: rgba(255, 165, 0, 0.70);
+}
+
+#dark .label-check{
+    color: #FFF;
+}
+
+.label-check{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.titulo-denunciar{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-bottom: 20px;
+}
+
+#light .titulo-denunciar{
+    color: #FFA500;
+}
+
+#dark .titulo-denunciar{
+    color: #FFF;
+}
+
+#light .form-select{
+    color: #e79600;
+    border: 1px solid #FFA500;
+}
+
+#dark .form-select{
+    color: #000036;
+    border: 1px solid #000036;
+}
+
+#light .form-control{
+    color: #e79600;
+    border: 1px solid #FFA500;
+    background: rgba(255, 255, 255, 0.60);
+}
+
+#dark .form-control{
+    color: #000036;
+    border: 1px solid #000036;
+    background: #FFF;
+}
+
+#light .form-check-input:checked {
+    background-color: #FFA500;
+    border-color: #d88c00;
+}
+
+#dark .form-check-input:checked{
+    background-color: #1f1f5e;
+    border-color: #00002b;
+}
+
+.container-select{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textarea{
+    color: #000;
+}
+
+.lista-files{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin: 30px 0;
+}
+
+.itens-lista{
+    display: flex;
+    align-items: center;
+    margin:10px 0;
+    justify-content: space-between;
+}
+
+.btn-excluir{
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.btn-excluir:hover{
+    background-color: #e79600;
+}
+
+#light .btn-excluir{
+    background: #FFB84C;;
+}
+
+#light .btn-excluir:hover{
+    background-color: #e79600;
+}
+
+#dark .btn-excluir{
+    background: #AEE2FF;
+    color: #000036;
+}
+
+#dark .btn-excluir:hover{
+    background-color: #9ac8e0;
+}
+
+.linha-inputs{
+    margin-bottom: 15px;
+}

@@ -1,0 +1,85 @@
+.container-console{
+    width: 1060px;
+    min-height: 500px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.50);
+    padding: 80px 50px;
+}
+
+.container-minhasD{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
+    padding: 0;
+}
+
+.items-console{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.botao{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.titulo-minhasD{
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+#light .titulo-minhasD{
+    color: #FFA500;
+}
+
+#dark .titulo-minhasD{
+    color: #FFF;
+}
+
+.subtitulo-minhasD{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.minhasD{
+    font-size: 20px;
+    font-style: normal;
+    margin: 0;
+}
+
+#light .minhasD{
+    color: #FFA500;
+}
+
+#dark .minhasD{
+    color: #FFF;
+}
+
+#light .subtitulo-minhasD{
+    color: #FFA500;
+}
+
+#dark .subtitulo-minhasD{
+    color: #FFF;
+}
+
+#light .borda{
+    width: 100%;
+    height: 60px;
+    border: 3px solid #FFA500;
+}
+
+#dark .borda{
+    width: 100%;
+    height: 60px;
+    border: 3px solid #000036;
+}

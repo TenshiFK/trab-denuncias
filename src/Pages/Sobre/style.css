@@ -1,0 +1,75 @@
+.btn-voltar{
+    margin-top: 100px;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 5px 100px;
+    font-size: 22px;
+}
+
+#light .btn-voltar{
+    background: #FFA500;
+}
+
+#light .btn-voltar:hover{
+    background-color: #e79600;
+}
+
+#dark .btn-voltar{
+    background: #AEE2FF;
+    color: #000036;
+}
+
+#dark .btn-voltar:hover{
+    background-color: #9ac8e0;
+}
+
+.titulo-sobre{
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+#light .titulo-sobre{
+    color: #281800CC;
+}
+
+#dark .titulo-sobre{
+    color: #FFFFFF;
+}
+
+.texto-sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.texto-sobre-div{
+    width: 75%;
+}
+
+.p-sobre{
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 40px;
+}
+#light .p-sobre{
+    color: #281800B2;
+}
+
+#dark .p-sobre{
+    color: #FFFFFF;
+}
+
+#dark .icon-sobre-light{
+    display: none;
+}
+
+#light .icon-sobre-dark{
+    display: none;
+}

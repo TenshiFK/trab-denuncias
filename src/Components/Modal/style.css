@@ -1,0 +1,57 @@
+.btn-info{
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#light .btn-info{
+    background: #FFB84C;;
+}
+
+#light .btn-info{
+    background-color: #e79600;
+}
+
+#dark .btn-info{
+    background: #AEE2FF;
+    color: #000036;
+}
+
+#dark .btn-info{
+    background-color: #9ac8e0;
+}
+
+.ReactModal__Content--after-open{
+    padding: 80px 50px;
+    background: #5C6286 !important;
+    border-radius: 20px !important;
+}
+
+.btn-fechar{
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#light .btn-fechar{
+    background: #FFB84C;;
+}
+
+#light .btn-fechar{
+    background-color: #e79600;
+}
+
+#dark .btn-fechar{
+    background: #AEE2FF;
+    color: #000036;
+}
+
+#dark .btn-fechar{
+    background-color: #9ac8e0;
+}

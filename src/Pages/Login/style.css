@@ -1,0 +1,57 @@
+.icone-login{
+    position: relative;
+    bottom: -90px;
+}
+
+#dark .icone-login-light{
+    display: none;
+}
+
+#light .icone-login-dark{
+    display: none;
+}
+
+.container-login{
+    border-radius: 10px;
+    background: #FFF;
+    width: 550px;
+    height: 500px;
+    flex-shrink: 0;
+    margin-bottom: 100px;
+    padding: 0px 60px;
+}
+
+.input{
+    margin-bottom: 50px;
+}
+
+form{
+    width: 100%;
+}
+
+.btn-login{
+    margin-bottom: -20px;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 10px 100px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#light .btn-login{
+    background: #FFB84C;
+}
+
+#light .btn-login:hover{
+    background-color: #e79600;
+}
+
+#dark .btn-login{
+    background: #AEE2FF;
+    color: #000036;
+}
+
+#dark .btn-login:hover{
+    background-color: #9ac8e0;
+}

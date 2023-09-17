@@ -1,0 +1,60 @@
+/* styles Gerais para todas as páginas */
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.row{
+    margin: 0;
+}
+
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#light .context-cor{
+    background-color: #FFF4D0;
+}
+
+#dark .context-cor{
+    background-color: #000036;
+}
+
+.conteudo-principal{
+    min-height: 100vh;
+}
+
+.centralizado-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centralizado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centralizado-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centralizado-items-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.centralizado-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

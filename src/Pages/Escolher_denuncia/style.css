@@ -1,0 +1,111 @@
+.container-escolha{
+    border-radius: 20px;
+    background: rgba(230, 246, 255, 0.50);
+    width: 860px;
+    min-height: 1200px;
+    flex-shrink: 0;
+    margin-top: 40px;
+    padding: 50px 60px;
+}
+
+.titulo-escolha{
+    text-align: center;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#light .titulo-escolha{
+    color: #FF9A00;
+}
+
+#dark .titulo-escolha{
+    color: #AEE2FF;
+}
+
+.subtitulo-escolha{
+    width: 860px;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#light .subtitulo-escolha{
+    color: #000;
+}
+
+#dark .subtitulo-escolha{
+    color: #FFF;
+}
+
+.container-icone{
+    border-radius: 15px;
+    background: #AEE2FF;
+    min-width: 120px;
+    height: 102px;
+}
+
+.btn-escolha{
+    border: none;
+    background: none;
+    padding: 15px;
+    border-radius: 20px;
+
+}
+
+.btn-escolha:hover{
+    background-color:  rgba(215, 231, 240, 0.5);
+}
+
+.titulo-escola-btn{
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#light .titulo-escola-btn{
+    color: #000;
+}
+
+#dark .titulo-escola-btn{
+    color: #FFFFFF;
+}
+
+.p-escolha-btn{
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    text-align: justify;
+    margin: 0;
+}
+
+#light .p-escolha-btn{
+    color: #000;
+}
+
+#dark .p-escolha-btn{
+    color: #FFFFFF;
+}
+
+.texto-escolha{
+    align-items: start;
+    margin-left: 25px;
+}
+
+.btn-voltar{
+    margin-top: 60px;
+}
+
+#dark .icone-escolha-light{
+    display: none;
+}
+
+#light .icone-escolha-dark{
+    display: none;
+}

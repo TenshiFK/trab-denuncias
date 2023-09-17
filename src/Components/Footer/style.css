@@ -1,0 +1,111 @@
+.rodape{
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#light .rodape{
+    background-color: #FFB84C;
+}
+
+#dark .rodape{
+    background-color: #AEE2FF;
+}
+
+#light .titulo-rodape{
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+#dark .titulo-rodape{
+    color: black;
+    font-size: 24px;
+}
+
+h2 > span{
+    font-weight: 800;
+}
+
+#light .retangulo-lojas{
+    border: 1px solid #FFFFFF;
+    border-radius: 12px;
+    padding: 5px 30px;
+}
+
+#dark .retangulo-lojas{
+    border: 1px solid #000000;
+    border-radius: 12px;
+    padding: 5px 30px;
+}
+
+.margin-retangulo-lojas{
+    margin-left: 30px
+}
+
+#light .baixar{
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+#dark .baixar{
+    color: #000000;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+#light .loja{
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+#dark .loja{
+    color: #000000;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.line-rodape{
+    width: 1px;
+    height: 20px;
+    background-color: #797980;
+    margin: 0 10px;
+}
+
+.centralizado-flex-rodape{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.p-rodape{
+    color: #797980;
+    font-size: 13px;
+}
+
+#dark .apple-light{
+    display: none;
+}
+
+#light .apple-dark{
+    display: none;
+}
+
