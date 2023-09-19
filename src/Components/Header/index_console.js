@@ -20,15 +20,17 @@ export default function HeaderConsole(){
         <Navbar className="header" expand="lg">
             <Container fluid>
                 <Navbar.Brand>
-                    <img className="logo_light" src={Logo} width={270}/>
-                    <img className="logo_dark" src={Logo_dark} width={270}/>
+                    <Link to={'/console'}>
+                        <img className="logo_light" src={Logo} width={270}/>
+                        <img className="logo_dark" src={Logo_dark} width={270}/>
+                    </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll"/>
                 <Navbar.Collapse className="justify-content-end" id="navbarScroll">
                     <Nav  
                     className=" my-2 my-lg-0"
                     style={{ maxHeight: '100px' }}
-                    navbarScroll>
+                    navbarScroll> 
                         <ThemeButtonPage/>
                         <Link to={'/login'} onClick={ () => logout() }>Sair</Link>   
                     </Nav>

@@ -1,18 +1,29 @@
+
 const initialState = {
-    showYesNoModal: false
+    showYesNoModal: false,
+    selectedItem: null
 }
 
 export function modalsStore(state = initialState, action) {
-    const actions = {
-        "ShowYesNoModal" : {
-            ...state,
-            showYesNoModal: true
-        },
-        "HideYesNoModal" : {
-            ...state,
-            showYesNoModal: false
-        }
+    switch(action.type){
+        case "SELECT_ITEM":
+            return {
+                ...state,
+                selectedItem: action.payload
+            }
+        case "ShowYesNoModal" :
+            return {
+                ...state,
+                showYesNoModal: true
+            }
+        case "HideYesNoModal" :
+            return {
+                ...state,
+                showYesNoModal: false
+            }
+        default:
+            return state;
     }
-
-    return actions[action.type] || state
 }
+
+

@@ -2,12 +2,28 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Modal from 'react-modal';
-import { connect } from 'react-redux'
+import { connect, useDispatch, useSelector } from 'react-redux'
 import api from '../../Services/api';
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import './style.css';
 import { IMaskInput } from 'react-imask';
 import { useThemeContext } from '../../Contexts/ThemeContext';
+import { selectItem } from './action';
+
+function Item({ item }) {
+    const dispatch = useDispatch();
+  
+    const handleSelect = () => {
+      dispatch(selectItem(item));
+    };
+  
+    return (
+      <div onClick={handleSelect}>
+        {item.name}
+      </div>
+    );
+  }
+
 
 const YesNoModal = ({ closeModal, showModal}) => {
 
@@ -66,80 +82,80 @@ const YesNoModal = ({ closeModal, showModal}) => {
                   <Row className='linha-inputs'>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Data de ocorrência</Form.Label>
-                                    <Form.Control type="date" value={Denunc.dataocorrencia} readOnly/>
+                                    <Form.Label className='label label-modal'>Data de ocorrência</Form.Label>
+                                    <Form.Control className='label-modal' type="date" value={Denunc.dataocorrencia} readOnly/>
                                 </Form.Group>
                             </Col>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Ocorre com frequência?</Form.Label>
-                                    <Form.Control type="text" value={Denunc.frequencia} readOnly/>
+                                    <Form.Label className='label label-modal'>Ocorre com frequência?</Form.Label>
+                                    <Form.Control className='label-modal' type="text" value={Denunc.frequencia} readOnly/>
                                 </Form.Group>
                             </Col>
                         </Row>  
                         <Row className='linha-inputs'>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Bairro</Form.Label>
-                                    <Form.Control type="text" value={Denunc.bairro} readOnly/>
+                                    <Form.Label className='label label-modal'>Bairro</Form.Label>
+                                    <Form.Control className='label-modal' type="text" value={Denunc.bairro} readOnly/>
                                 </Form.Group>
                             </Col>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Cidade</Form.Label>
-                                    <Form.Control type="text" value={Denunc.cidade} readOnly/>
+                                    <Form.Label className='label label-modal'>Cidade</Form.Label>
+                                    <Form.Control className='label-modal' type="text" value={Denunc.cidade} readOnly/>
                                 </Form.Group>
                             </Col>
                         </Row>
                         <Row className='linha-inputs'>
                             <Col md={8}>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Endereço</Form.Label>
-                                    <Form.Control type="text" value={Denunc.endereco} readOnly/>
+                                    <Form.Label className='label label-modal'>Endereço</Form.Label>
+                                    <Form.Control className='label-modal' type="text" value={Denunc.endereco} readOnly/>
                                 </Form.Group>
                             </Col>
                             <Col md={4}>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>CEP</Form.Label>
-                                    <Form.Control type="text" value={Denunc.cep} readOnly/>
+                                    <Form.Label className='label label-modal'>CEP</Form.Label>
+                                    <Form.Control className='label-modal' type="text" value={Denunc.cep} readOnly/>
                                 </Form.Group>
                             </Col>
                         </Row>
                         <Row className='linha-inputs'>
                             <Col md={8}>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Complemento</Form.Label>
-                                    <Form.Control type="text" value={Denunc.complemento} readOnly/>
+                                    <Form.Label className='label label-modal'>Complemento</Form.Label>
+                                    <Form.Control className='label-modal' type="text" value={Denunc.complemento} readOnly/>
                                 </Form.Group>
                             </Col>
                             <Col md={4}>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Número</Form.Label>
-                                    <Form.Control type="text" value={Denunc.numcasa} readOnly/>
+                                    <Form.Label className='label label-modal'>Número</Form.Label>
+                                    <Form.Control className='label-modal' type="text" value={Denunc.numcasa} readOnly/>
                                 </Form.Group>
                             </Col>
                         </Row>
                         <Row className='linha-inputs'>
                             <Col>
                                 <Form.Group>
-                                    <Form.Check className='label-check' label={'Não sei o endereço do denunciado'} 
+                                    <Form.Check className='label-check label-modal' label={'Não sei o endereço do denunciado'} 
                                     checked={Denunc.naoseiencereco} readOnly
                                     />
                                 </Form.Group>
                             </Col>
                         </Row>
-                        <h1 className='titulo-denunciar'>Informações Gerais</h1>
+                        <h1 className='titulo-denunciar label-modal'>Informações Gerais</h1>
                         <Row className='linha-inputs'>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Nome do denunciado</Form.Label>
-                                    <Form.Control type="text" value={Denunc.nome} readOnly/>
+                                    <Form.Label className='label label-modal'>Nome do denunciado</Form.Label>
+                                    <Form.Control className='label-modal' type="text" value={Denunc.nome} readOnly/>
                                 </Form.Group>
                             </Col>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Número do denunciado</Form.Label>
-                                    <Form.Control as={IMaskInput} mask="(00) 00000-0000" placeholder='(00) 00000-0000'  type="text" 
+                                    <Form.Label className='label label-modal'>Número do denunciado</Form.Label>
+                                    <Form.Control className='label-modal' as={IMaskInput} mask="(00) 00000-0000" placeholder='(00) 00000-0000'  type="text" 
                                     value={Denunc.numdenunciado} readOnly/>
                                 </Form.Group>
                             </Col>
@@ -147,10 +163,10 @@ const YesNoModal = ({ closeModal, showModal}) => {
                         <Row className='linha-inputs'>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label' >Sexo:</Form.Label>
+                                    <Form.Label className='label label-modal' >Sexo:</Form.Label>
                                     {['radio'].map((type) => (
                                         <div key={`sexo-${type}`} className="mb-3 centralizado-items-flex">
-                                            <Form.Check className='label-check'
+                                            <Form.Check className='label-check label-modal'
                                                 inline
                                                 label="Feminino"
                                                 value="Feminino"
@@ -159,7 +175,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                                 id={`sexo-${type}-1`}
                                                 checked={Denunc.sexo === "Feminino"} readOnly
                                             />
-                                            <Form.Check className='label-check'
+                                            <Form.Check className='label-check label-modal'
                                                 inline
                                                 label="Masculino"
                                                 value="Masculino"
@@ -174,15 +190,15 @@ const YesNoModal = ({ closeModal, showModal}) => {
                             </Col>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Idade (exata ou aproximada)</Form.Label>
-                                    <Form.Control type="text" value={Denunc.idade} readOnly/>
+                                    <Form.Label className='label label-modal'>Idade (exata ou aproximada)</Form.Label>
+                                    <Form.Control className='label-modal' type="text" value={Denunc.idade} readOnly/>
                                 </Form.Group>
                             </Col>
                         </Row>
                         <Row className='linha-inputs'>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Cor da pele</Form.Label>
+                                    <Form.Label className='label label-modal'>Cor da pele</Form.Label>
                                     <Form.Select aria-label="Default select example" value={Denunc.corpele} readOnly>
                                         <option>Selecione</option>
                                         <option value="Branca">Branca</option>
@@ -194,7 +210,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                             </Col>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Cor dos olhos</Form.Label>
+                                    <Form.Label className='label label-modal'>Cor dos olhos</Form.Label>
                                     <Form.Select aria-label="Default select example" value={Denunc.corolhos} readOnly>
                                         <option>Selecione</option>
                                         <option value="Azul">Azul</option>
@@ -208,7 +224,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                         <Row className='linha-inputs'>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Cor do cabelo</Form.Label>
+                                    <Form.Label className='label label-modal'>Cor do cabelo</Form.Label>
                                     <Form.Select aria-label="Default select example" value={Denunc.corcabelo} readOnly>
                                         <option>Selecione</option>
                                         <option value="Loiro">Loiro</option>
@@ -221,7 +237,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                             </Col>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label className='label'>Tipo de cabelo</Form.Label>
+                                    <Form.Label className='label label-modal'>Tipo de cabelo</Form.Label>
                                     <Form.Select aria-label="Default select example" value={Denunc.tipocabelo} readOnly>
                                         <option>Selecione</option>
                                         <option value="Liso">Liso</option>
@@ -238,25 +254,25 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                     {['checkbox'].map((type) => (
                                         <div key={`block-${type}`} className="mb-3">
-                                        <Form.Check className='label-check'
+                                        <Form.Check className='label-check label-modal'
                                             label="Tatuagem"
                                             type={type}
                                             id={`block-${type}-1`}
                                             checked={Denunc.tatuagem} readOnly
                                         />
-                                        <Form.Check className='label-check'
+                                        <Form.Check className='label-check label-modal'
                                             label="Cicatriz"
                                             type={type}
                                             id={`block-${type}-2`}
                                             checked={Denunc.cicatriz} readOnly
                                         />
-                                        <Form.Check className='label-check'
+                                        <Form.Check className='label-check label-modal'
                                             label="Deficiência"
                                             type={type}
                                             id={`block-${type}-3`}
                                             checked={Denunc.deficiencia} readOnly
                                         />
-                                        <Form.Check className='label-check'
+                                        <Form.Check className='label-check label-modal'
                                             label="Óculos"
                                             type={type}
                                             id={`reverse-${type}-3`}
@@ -272,8 +288,8 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                             {['radio'].map((type) => (
                                                 <div key={`inline-${type}`} className="mb-3 container-select">
-                                                    <Form.Label className='label'>Estatura:</Form.Label>
-                                                    <Form.Check className='label-check'
+                                                    <Form.Label className='label label-modal'>Estatura:</Form.Label>
+                                                    <Form.Check className='label-check label-modal'
                                                         inline
                                                         label="Não sei"
                                                         value="Não sei"
@@ -282,7 +298,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                                         id={`inline-${type}-1`}
                                                         checked={Denunc.estatura === "Não sei"} readOnly
                                                     />
-                                                    <Form.Check className='label-check'
+                                                    <Form.Check className='label-check label-modal'
                                                         inline
                                                         label="Alta"
                                                         value="Alta"
@@ -291,7 +307,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                                         id={`inline-${type}-2`}
                                                         checked={Denunc.estatura === "Alta"} readOnly
                                                     />
-                                                    <Form.Check className='label-check'
+                                                    <Form.Check className='label-check label-modal'
                                                         inline
                                                         label="Média"
                                                         value="Média"
@@ -300,7 +316,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                                         id={`inline-${type}-3`}
                                                         checked={Denunc.estatura === "Média"} readOnly
                                                     />
-                                                    <Form.Check className='label-check'
+                                                    <Form.Check className='label-check label-modal'
                                                         inline
                                                         label="Baixa"
                                                         value="Baixa"
@@ -319,8 +335,8 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                             {['radio'].map((type) => (
                                                 <div key={`inline-${type}`} className="mb-3 container-select">
-                                                    <Form.Label className='label'>Tipo físico:</Form.Label>
-                                                    <Form.Check className='label-check'
+                                                    <Form.Label className='label label-modal'>Tipo físico:</Form.Label>
+                                                    <Form.Check className='label-check label-modal'
                                                         inline
                                                         label="Não sei"
                                                         value="Não sei"
@@ -329,7 +345,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                                         id={`inline-${type}-1`}
                                                         checked={Denunc.fisico === "Não sei"} readOnly
                                                     />
-                                                    <Form.Check className='label-check'
+                                                    <Form.Check className='label-check label-modal'
                                                         inline
                                                         label="Magro"
                                                         value="Magro"
@@ -338,7 +354,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                                         id={`inline-${type}-2`}
                                                         checked={Denunc.fisico === "Magro"} readOnly
                                                     />
-                                                    <Form.Check className='label-check'
+                                                    <Form.Check className='label-check label-modal'
                                                         inline
                                                         label="Médio"
                                                         value="Médio"
@@ -347,7 +363,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                                         id={`inline-${type}-3`}
                                                         checked={Denunc.fisico === "Médio"} readOnly
                                                     />
-                                                    <Form.Check className='label-check'
+                                                    <Form.Check className='label-check label-modal'
                                                         inline
                                                         label="Gordo"
                                                         value="Gordo"
@@ -368,8 +384,8 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                     {['radio'].map((type) => (
                                         <div key={`block-${type}`} className="mb-3">
-                                            <Form.Label className='label'>O denunciado utiliza tornozeleira eletrônica?</Form.Label>
-                                            <Form.Check className='label-check'
+                                            <Form.Label className='label label-modal'>O denunciado utiliza tornozeleira eletrônica?</Form.Label>
+                                            <Form.Check className='label-check label-modal'
                                                 label="Sim"
                                                 value="Sim"
                                                 name="tornozeleira"
@@ -377,7 +393,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                                 id={`block-${type}-1`}
                                                 checked={Denunc.tornozeleira === "Sim"} readOnly
                                             />
-                                            <Form.Check className='label-check'
+                                            <Form.Check className='label-check label-modal'
                                                 label="Não"
                                                 value="Não"
                                                 name="tornozeleira"
@@ -385,7 +401,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                                 id={`block-${type}-2`}
                                                 checked={Denunc.tornozeleira === "Não"} readOnly
                                             />
-                                            <Form.Check className='label-check'
+                                            <Form.Check className='label-check label-modal'
                                                 label="Não sei"
                                                 value="Não sei"
                                                 name="tornozeleira"
@@ -403,8 +419,8 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                     {['radio'].map((type) => (
                                         <div key={`block-${type}`} className="mb-3">
-                                            <Form.Label className='label'>O denunciado porta arma de fogo?</Form.Label>
-                                            <Form.Check className='label-check'
+                                            <Form.Label className='label label-modal'>O denunciado porta arma de fogo?</Form.Label>
+                                            <Form.Check className='label-check label-modal'
                                                 label="Sim"
                                                 name="arma"
                                                 value='Sim'
@@ -412,7 +428,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                                 id={`block-${type}-1`}
                                                 checked={Denunc.arma === "Sim"} readOnly
                                             />
-                                            <Form.Check className='label-check'
+                                            <Form.Check className='label-check label-modal'
                                                 label="Não"
                                                 name="arma"
                                                 value='Não'
@@ -420,7 +436,7 @@ const YesNoModal = ({ closeModal, showModal}) => {
                                                 id={`block-${type}-2`}
                                                 checked={Denunc.arma === "Não"}  readOnly
                                             />
-                                            <Form.Check className='label-check'
+                                            <Form.Check className='label-check label-modal'
                                                 label="Não sei"
                                                 name="arma"
                                                 value='Não sei'
@@ -436,8 +452,8 @@ const YesNoModal = ({ closeModal, showModal}) => {
                         <Row className='linha-inputs'>
                             <Col>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                    <Form.Label className='label'>Descreva no campo tudo que julgar necessário:</Form.Label>
-                                    <Form.Control className='textarea' as="textarea" rows={5} value={Denunc.textarea} readOnly/>
+                                    <Form.Label className='label label-modal'>Descreva no campo tudo que julgar necessário:</Form.Label>
+                                    <Form.Control className='label-modal textarea' as="textarea" rows={5} value={Denunc.textarea} readOnly/>
                                 </Form.Group>
                             </Col>
                         </Row>

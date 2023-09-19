@@ -24,9 +24,13 @@
     background-color: #9ac8e0;
 }
 
+#dark .label-modal{
+    color: #000036;
+}
+
 .ReactModal__Content--after-open{
     padding: 80px 50px;
-    background: #5C6286 !important;
+    background: #d9dadd !important;
     border-radius: 20px !important;
 }
 

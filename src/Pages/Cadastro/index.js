@@ -63,7 +63,7 @@ function Cadastro() {
                           value={password} onChange={ (e) => setPassword(e.target.value) }/>
                         </Form.Group>
                         <div className="centralizado-items-flex container-btn">
-                          <Link to={'/denuncia'}><button className="btn-cadastro margem">Já possuo Cadastro</button></Link>
+                          <Link to={'/login'}><button className="btn-cadastro margem">Já possuo Cadastro</button></Link>
                           <button className="btn-cadastro" onClick={handleSubmit}>{loadingAuth ? 'Carregando...' : 'Fazer Cadastro'}</button>
                         </div>
                         

@@ -20,8 +20,7 @@ export default function RoutesApp(){
             <Route path="/cadastro" element={<ThemeProvider><Cadastro/></ThemeProvider>}/>
             <Route path="/escolha" element={<ThemeProvider><Escolha/></ThemeProvider>}/>
             <Route path="/denuncia" element={<ThemeProvider><Denuncia/></ThemeProvider>}/>
-            <Route path="/console" element={<ThemeProvider><Private><Console/></Private></ThemeProvider>}/>
-        </Routes>
+            <Route path="/console" element={<ThemeProvider><Private><Console/></Private></ThemeProvider>}/>        </Routes>
 
     )
 }
